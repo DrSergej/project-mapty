@@ -1,7 +1,5 @@
 'use strict';
 
-// const { divIcon } = require('leaflet');
-
 class Workout {
   id = crypto.randomUUID().slice(-10);
   date = new Date();
@@ -179,9 +177,6 @@ class App {
       const cadence = +inputCadence.value;
       // Check if data is valid
       if (
-        // !Number.isFinite(distance) ||
-        // !Number.isFinite(duration) ||
-        // !Number.isFinite(cadence)
         !validInputs(distance, duration, cadence) ||
         !allPositive(distance, duration, cadence)
       )
